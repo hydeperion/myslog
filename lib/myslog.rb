@@ -52,7 +52,7 @@ class MySlog
         elems = record[2..-1].strip().split " "
         if elems.size == 3 && elems[0] == "Time:"
           response[:date] = Time.parse(elems[1]+" "+elems[2])
-        elsif elems.size == 2 && elems[0] == "Time:"
+        elsif elems.size == 2 && elems[0] == "Time:" 
           response[:date] = Time.parse(elems[1][0..9]+" "+elems[1][11..18])
         else
           elems.each_with_index do |elem,i|
